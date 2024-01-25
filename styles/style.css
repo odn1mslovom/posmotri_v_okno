@@ -62,6 +62,7 @@ ol {
 }
 
 .content__list {
+  position: relative;
   width: 100%;
   margin-top: 26px;
   max-height: 298px;
@@ -106,4 +107,40 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+}
+
+.title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+}
+
+.content__video-card-title {
+  margin-bottom: 6px;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  color: #FFF;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.9;
 }
