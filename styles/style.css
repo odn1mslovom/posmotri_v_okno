@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -61,8 +64,8 @@ ol {
   block-size: 34px;
   padding: 6px;
   background-color: transparent;
-  border: 1px solid #fff;
-  color: #FFF;
+  border: 1px solid currentColor;
+  color: #fff;
   text-align: center;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -85,7 +88,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 2px;
 }
 
@@ -111,20 +114,19 @@ ol {
   align-items: stretch;
   justify-content: center;
   gap: 16px;
-  min-block-size: 456px;
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
-  height: 386px;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 .result__video {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -149,6 +151,7 @@ ol {
 
 .search-form__label {
   display: flex;
+  align-items: center;
   gap: 5px;
   width: fit-content;
   cursor: pointer;
@@ -164,19 +167,23 @@ ol {
   padding: 2px;
   background-color: inherit;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   outline: none;
   font-family: "Fira Sans Condensed", sans-serif;
-  color: rgba(255, 255, 255, 0.70);
+  color: #fff;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0;
 }
 
+.search-form__textfield::placeholder {
+  opacity: .7;
+}
+
 .search-form__textfield:active {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
 }
 
 .search-form__textfield:focus {
@@ -184,12 +191,12 @@ ol {
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible){
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 2px;
 }
 
 .search-form__label:has(.search-form__textfield:active) {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
 }
 
                     /*  End Text Input*/
@@ -204,13 +211,14 @@ ol {
 
 .search-form__pseudo-checkbox {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 19px;
   height: 19px;
   padding: 1px;
   border-radius: 0;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   cursor: pointer;
 }
 
@@ -222,13 +230,11 @@ ol {
   margin: auto;
   width: 15px;
   height: 15px;
-  object-fit: cover;
-  object-position: center;
-  background-color: white;
+  background-color: #fff;
 }
 
-.search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 1px solid #fff;
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid currentColor;
   outline-offset: 2px;
 }
 
@@ -245,14 +251,13 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   gap: 26px;
-  max-inline-size: 399px;
-  min-block-size: 534px;
-  width: 100%;
-  height: 100%;
+  min-inline-size: 399px;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .title {
-  color: #FFF;
+  color: #fff;
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
@@ -270,9 +275,9 @@ ol {
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
-  max-block-size: 298px;
+  block-size: 298px;
   padding: 2px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .content__card-link {
@@ -299,14 +304,13 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
 }
 
 .content__video-card {
   display: flex;
   align-items: flex-start;
   max-inline-size: 394px;
-  min-block-size: 103px;
 }
 
 .content__video-card-description-container {
@@ -315,12 +319,12 @@ ol {
   align-items: flex-start;
   gap: 6px;
   max-inline-size: 200px;
-  min-block-size: 101px;
   padding: 2px 0 2px 2px;
   flex-grow: 1;
 }
 
 .content__video-card-title {
+  width: 100%;
   font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
@@ -340,8 +344,11 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
+  inline-size: 194px;
+  block-size: 103px;
   object-fit: cover;
   object-position: center;
 }
+
+
+
