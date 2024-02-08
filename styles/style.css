@@ -253,7 +253,6 @@ ol {
   gap: 26px;
   min-inline-size: 399px;
   inline-size: 100%;
-  block-size: 100%;
 }
 
 .title {
@@ -349,6 +348,3 @@ ol {
   object-fit: cover;
   object-position: center;
 }
-
-
-
