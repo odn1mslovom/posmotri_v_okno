@@ -251,8 +251,7 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   gap: 26px;
-  min-inline-size: 399px;
-  inline-size: 100%;
+  inline-size: 399px;
 }
 
 .title {
